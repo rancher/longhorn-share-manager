@@ -13,10 +13,10 @@ jobs:
       with:
         persist-credentials: false
     - name: repo-sync
-      uses: repo-sync/github-sync@v2
+      uses: rancher/gh-issue-mgr/github-sync@main
       with:
         source_repo: "https://github.com/longhorn/longhorn-share-manager.git"
         source_branch: "*"
         destination_branch: "*"
-        sync_tags: ""
+        sync_tags: "true"
         github_token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
